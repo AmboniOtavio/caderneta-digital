@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.caderneta {
+  font-family: "Parkinsans", sans-serif;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tarefa-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tarefa-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: calc(100% - 110px); /* Subtrai a largura do botão e o gap */
+}
+
+.tarefa-container button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100px; /* Definindo largura fixa para o botão */
+  box-sizing: border-box;
+}
+
+.tarefa-container button:hover {
+  background-color: #45a049;
+}
+
+.filtro {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.filtro button {
+  padding: 8px;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.filtro button:hover {
+  background-color: #dcdcdc;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button.delete {
+  background-color: red;
+  border: 2px solid #d32f2f;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+button.delete:hover {
+  background-color: #ff6659;
+  border-color: #ff3d2e;
+}
+
+#calendario-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+}
+
+#calendario {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes explosao {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.explosao {
+  animation: explosao 0.5s forwards;
+}
+
+/* Estilo para a caixinha de seleção (checkbox) */
+li input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+

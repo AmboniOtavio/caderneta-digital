@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caderneta de Afazeres</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <!-- Calendário no canto superior direito -->
+  <div id="calendario-container">
+    <input id="calendario" type="date" placeholder="Selecione uma data">
+  </div>
+
+  <!-- Caderneta de Afazeres -->
+  <div class="caderneta">
+    <h1>Minha Caderneta de Afazeres</h1>
+    <p id="dataAtual"></p> <!-- Exibição da data atual -->
+    
+    <!-- Contêiner para alinhar input e botão -->
+    <div class="tarefa-container">
+      <input type="text" id="novaTarefa" placeholder="Adicionar nova tarefa">
+      <button id="adicionarTarefa">Adicionar</button>
+    </div>
+
+    <!-- Filtro para tarefas -->
+    <div class="filtro">
+      <button id="mostrarTodos">Mostrar Todos</button>
+      <button id="mostrarConcluidas">Mostrar Concluídas</button>
+      <button id="mostrarNaoConcluidas">Mostrar Não Concluídas</button>
+    </div>
+    
+    <!-- Lista de tarefas -->
+    <ul id="listaAfazeres"></ul>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
